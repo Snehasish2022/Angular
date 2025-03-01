@@ -1,0 +1,144 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+header .buttons {
+    margin-top: 10px;
+}
+header .buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex: 1;
+}
+.sidebar {
+    width: 200px;
+    background: #222;
+    color: white;
+    padding: 20px;
+    height: calc(100vh - 120px);
+}
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    background: #333;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.sidebar a:hover {
+    background: #555;
+}
+
+/* Content */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+.section {
+    display: none;
+    margin-bottom: 20px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Image View */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.image-container img {
+    width: 200px;
+    height: 150px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.image-container img:hover {
+    border-color: red;
+}
+.image-container img.active {
+    border: 5px solid red;
+}
+
+/* Table View */
+.sticky-table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border: 1px solid black;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+/* Sticky First Column */
+.sticky-table thead th {
+    position: sticky;
+    top: 0;
+    background: #444;
+    color: white;
+}
+.sticky-table tbody td:first-child,
+.sticky-table thead th:first-child {
+    position: sticky;
+    left: 0;
+    background: #555;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
